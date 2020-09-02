@@ -26,6 +26,14 @@ Route::get('/prueba/{nombre?}', function($nombre = null){
 
  Route::get('/animales', 'PruebasController@index');
  Route::get('/test-orm', 'PruebasController@testOrm');
+
+ //Metodos http comunes
+ /*
+    get: Conseguir datos o recursos
+    Post: guardar datos o recuersos o hacer logica desde el formulario
+    Put: actualizar datos o recursos 
+    delete: eliminar datos 
+ */
  
  //Rutas del API
 
@@ -34,3 +42,8 @@ Route::get('/prueba/{nombre?}', function($nombre = null){
  Route::get('/categoria/pruebas', 'CategoryController@pruebas');
  
  Route::get('/entrada/pruebas', 'PostController@pruebas');
+
+ //Rutas del controlador de usuario
+
+ Route::post('/api/register', 'UserController@register');
+ Route::post('/api/login', 'UserController@login');
