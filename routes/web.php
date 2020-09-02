@@ -25,3 +25,12 @@ Route::get('/prueba/{nombre?}', function($nombre = null){
 });
 
  Route::get('/animales', 'PruebasController@index');
+ Route::get('/test-orm', 'PruebasController@testOrm');
+ 
+ //Rutas del API
+
+ Route::get('/usuario/pruebas', 'UserController@pruebas');
+ 
+ Route::get('/categoria/pruebas', 'CategoryController@pruebas');
+ 
+ Route::get('/entrada/pruebas', 'PostController@pruebas');
